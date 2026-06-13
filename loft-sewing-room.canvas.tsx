@@ -41,23 +41,26 @@ function FloorPlan() {
     >
       <rect x={pad} y={pad} width={w} height={l} fill={theme.bg.elevated} stroke={theme.stroke.primary} strokeWidth={2} />
 
-      {/* Loft + office against the solid TOP wall */}
+      {/* Loft + cube/cart storage against the solid TOP wall */}
       <rect x={inX(3)} y={inY(1)} width={80 * s} height={40 * s} fill={theme.fill.tertiary} stroke={theme.accent.primary} strokeWidth={1.5} rx={3} />
       <text x={inX(43)} y={inY(21)} fill={theme.text.primary} fontSize={10} textAnchor="middle">
         <tspan x={inX(43)} dy={-6}>Loft above</tspan>
-        <tspan x={inX(43)} dy={12}>office below</tspan>
+        <tspan x={inX(43)} dy={12}>cube + cart below</tspan>
       </text>
 
-      {/* Sewing station on LEFT wall, under the 60in window */}
+      {/* Office desk on LEFT wall, under the 60in window */}
       <rect x={inX(1)} y={inY(75)} width={23 * s} height={53 * s} fill={theme.fill.secondary} stroke={theme.stroke.secondary} strokeWidth={1.5} rx={3} />
       <text x={inX(13)} y={inY(101)} fill={theme.text.primary} fontSize={10} textAnchor="middle">
-        <tspan x={inX(13)} dy={-6}>Sewing</tspan>
-        <tspan x={inX(13)} dy={12}>station</tspan>
+        <tspan x={inX(13)} dy={-6}>Office</tspan>
+        <tspan x={inX(13)} dy={12}>desk</tspan>
       </text>
 
-      {/* Cube + cart on RIGHT wall middle */}
-      <rect x={inX(76)} y={inY(50)} width={23 * s} height={42 * s} fill={theme.fill.secondary} stroke={theme.stroke.secondary} strokeWidth={1.5} rx={3} />
-      <text x={inX(87.5)} y={inY(71)} fill={theme.text.primary} fontSize={9.5} textAnchor="middle">Cube + cart</text>
+      {/* Sewing station on RIGHT wall middle */}
+      <rect x={inX(76)} y={inY(46)} width={23 * s} height={54 * s} fill={theme.fill.secondary} stroke={theme.stroke.secondary} strokeWidth={1.5} rx={3} />
+      <text x={inX(87.5)} y={inY(73)} fill={theme.text.primary} fontSize={9.5} textAnchor="middle">
+        <tspan x={inX(87.5)} dy={-6}>Sewing</tspan>
+        <tspan x={inX(87.5)} dy={12}>station</tspan>
+      </text>
 
       {/* Rug */}
       <rect x={inX(28)} y={inY(60)} width={50 * s} height={52 * s} fill={theme.fill.primary} stroke={theme.stroke.tertiary} strokeWidth={1.5} strokeDasharray="5 4" rx={3} />
@@ -90,10 +93,14 @@ function FloorPlan() {
 
 export default function LoftSewingRoom() {
   const L = {
-    harrietBee: "https://www.wayfair.com/baby-kids/pdp/harriet-bee-w119266927.html?piid=883270059%2C883270062",
-    targetLoft: "https://www.target.com/p/twin-size-wood-loft-bed-with-desk-multiple-storage-shelves-and-wardrobe-gray-white-modernluxe/-/A-1003413014",
-    vitval: "https://www.ikea.com/us/en/p/vitval-loft-bed-frame-with-desk-top-white-light-gray-s29303940/",
+    vitval: "https://www.ikea.com/us/en/p/vitval-loft-bed-frame-white-light-gray-50428930/",
+    wayfairLoft: "https://www.wayfair.com/keyword.php?keyword=twin%20loft%20bed%20open%20underneath",
+    targetLoft: "https://www.target.com/s?searchTerm=twin+loft+bed+open",
     stora: "https://www.ikea.com/us/en/p/stora-loft-bed-frame-black-80160867/",
+    lagkaptenDesk: "https://www.ikea.com/us/en/p/lagkapten-adils-desk-white-anthracite-s49417274/",
+    micke: "https://www.ikea.com/us/en/p/micke-desk-white-30244875/",
+    targetDesk: "https://www.target.com/s?searchTerm=writing+desk+47+inch+wood",
+    wayfairDesk: "https://www.wayfair.com/keyword.php?keyword=48%20inch%20writing%20desk%20wood",
     alex: "https://www.ikea.com/us/en/search/?q=alex%20drawer%20unit",
     lagkapten: "https://www.ikea.com/us/en/search/?q=lagkapten",
     skadis: "https://www.ikea.com/us/en/search/?q=skadis",
@@ -106,27 +113,33 @@ export default function LoftSewingRoom() {
   };
 
   const fitRows = [
-    [<Link href={L.harrietBee}>Harriet Bee loft + built-in desk</Link>, "Wayfair", "~67–69\"", "Fits — feature pick"],
-    [<Link href={L.targetLoft}>ModernLuxe / Bellemave twin loft</Link>, "Target", "~65–76\"", "Fits"],
-    [<Link href={L.vitval}>VITVAL twin + desk top</Link>, "IKEA", "76¾\"", "Fits (needs 94½\")"],
+    [<Link href={L.vitval}>VITVAL twin loft frame (open base)</Link>, "IKEA", "~64⅝\"", "Fits — feature pick"],
+    [<Link href={L.wayfairLoft}>Twin open-frame loft</Link>, "Wayfair", "~65–69\"", "Fits — clear underside"],
+    [<Link href={L.targetLoft}>Twin wood loft (open base)</Link>, "Target", "~65–70\"", "Fits"],
     [<Link href={L.stora}>STORÅ full, solid pine</Link>, "IKEA", "84¼\"", "Needs 106\" — ~4½\" short"],
   ];
   const fitTone: Array<"success" | "danger" | undefined> = ["success", "success", "success", "danger"];
 
   const loftRows = [
-    ["Wayfair", <Link href={L.harrietBee}>Harriet Bee loft bed w/ built-in desk & storage</Link>, "All-in-one loft + office + shelves (linked pick)", "~$400–600"],
-    ["Target", <Link href={L.targetLoft}>ModernLuxe / Bellemave twin loft w/ desk</Link>, "Alt loft: built-in desk, drawers, stair storage", "~$350–550"],
-    ["IKEA", <Link href={L.vitval}>VITVAL loft bed frame with desk top (twin)</Link>, "Lightest, cleanest; integrated desk surface", "~$259"],
+    ["IKEA", <Link href={L.vitval}>VITVAL loft bed frame (twin)</Link>, "Clean, light high loft — open base keeps the footprint clear for cubes + cart", "~$229"],
+    ["Wayfair", <Link href={L.wayfairLoft}>Twin loft bed, open frame</Link>, "Birch/white open lofts ~65–69\" with a clear underside", "~$250–450"],
+    ["Target", <Link href={L.targetLoft}>Twin wood loft bed (open base)</Link>, "Budget open loft so KALLAX cubes slide underneath", "~$250–500"],
+  ];
+  const deskRows = [
+    ["IKEA", <Link href={L.lagkaptenDesk}>LAGKAPTEN / ADILS desk (47×24)</Link>, "Simple light top that fits beneath the window for daylight", "~$70–90"],
+    ["IKEA", <Link href={L.micke}>MICKE desk (with cable mgmt)</Link>, "Compact desk with a drawer for built-in storage", "~$129"],
+    ["Target", <Link href={L.targetDesk}>47\" writing desk (wood/white)</Link>, "Matching light-wood alternative for the office zone", "~$120–180"],
+    ["Wayfair", <Link href={L.wayfairDesk}>48\" writing desk</Link>, "Birch-top options sized to sit under the window", "~$120–220"],
   ];
   const sewRows = [
-    ["IKEA", <Text as="span">2× <Link href={L.alex}>ALEX drawers</Link> + <Link href={L.lagkapten}>LAGKAPTEN</Link> top</Text>, "Classic sewing bench — notion drawers + sturdy top", "~$200–300"],
+    ["IKEA", <Text as="span">2× <Link href={L.alex}>ALEX drawers</Link> + <Link href={L.lagkapten}>LAGKAPTEN</Link> top</Text>, "A ~47\" top fits the 71\" solid right-wall run; notion drawers below", "~$200–300"],
     ["IKEA", <Link href={L.skadis}>SKÅDIS pegboard + hooks</Link>, "Scissors, thread, rulers above the bench", "~$30+"],
     ["Target", <Link href={L.cart}>Brightroom 3-tier utility cart</Link>, "Mobile catch-all for active projects", "~$40"],
     ["Wayfair", <Link href={L.craftTable}>Adjustable craft/sewing table (optional)</Link>, "Dedicated height/tilt table vs. ALEX combo", "~$120–200"],
   ];
   const finishRows = [
-    ["IKEA", <Link href={L.kallax}>KALLAX 2×2 / 2×4 + fabric bins</Link>, "Folded fabric, books; doubles as divider", "~$70–110"],
-    ["Target", <Link href={L.cube}>Brightroom cube organizer + drawers</Link>, "Alt cube storage in white/wood", "~$50–90"],
+    ["IKEA", <Link href={L.kallax}>KALLAX 2×2 / 2×4 + fabric bins</Link>, "Slides under the loft for folded fabric, bins, books", "~$70–110"],
+    ["Target", <Link href={L.cube}>Brightroom cube organizer + drawers</Link>, "Alt cube storage in white/wood for under the loft", "~$50–90"],
     ["Wayfair", <Link href={L.chair}>Ergonomic task chair (white/mesh)</Link>, "Shared by office desk and sewing bench", "~$90–160"],
     ["Target", <Link href={L.lamp}>Task lamp</Link>, "Sewing light + anchors the floor", "~$60–120"],
   ];
@@ -140,8 +153,8 @@ export default function LoftSewingRoom() {
         </Row>
         <Text tone="secondary">
           A compact 8'5" × 11'1" room with an 8'5½" ceiling doing triple duty:
-          a lofted bed, a sewing station under the window, and an office desk
-          beneath the loft.
+          a lofted bed with cube storage beneath it, an office desk under the
+          60" window, and a sewing station along the right wall.
         </Text>
         <Row gap={8} wrap>
           <Pill size="sm">1 · Loft sleeping platform</Pill>
@@ -151,10 +164,10 @@ export default function LoftSewingRoom() {
       </Stack>
 
       <Callout tone="success" title="The ceiling now works for a real loft">
-        At 101.5" (8'5½"), a standing loft is viable — IKEA VITVAL (needs 94½")
-        fits, and the Wayfair Harriet Bee and Target loft beds (~65–69" tall,
-        ~54" to the loft base) leave full headroom below for the desk. Only
-        IKEA's tall STORÅ (needs 106") still misses, by ~4½".
+        At 101.5" (8'5½"), a standing loft is viable — IKEA's open VITVAL loft
+        (~64⅝") fits easily, and most twin open-frame lofts run ~65–69" tall,
+        leaving a clear ~54" of headroom below for the cube storage and cart.
+        Only IKEA's tall STORÅ (needs 106") still misses, by ~4½".
       </Callout>
 
       <Grid columns={4} gap={12}>
@@ -169,10 +182,11 @@ export default function LoftSewingRoom() {
           <H3 style={{ margin: 0 }}>Top-down layout</H3>
           <FloorPlan />
           <Text size="small" tone="tertiary">
-            Schematic, not to scale. Loft + office sit against the only solid
-            wall (top); sewing bench under the 60" left window; cube storage on
-            the right wall between the closet and the 28" door; the 50" window
-            and 29" entry stay clear on the bottom wall.
+            Schematic, not to scale. The loft sits against the only solid wall
+            (top) with cube storage + cart beneath it; the office desk goes
+            under the 60" left window; the sewing station runs along the right
+            wall between the closet and the 28" door; the 50" window and 29"
+            entry stay clear on the bottom wall.
           </Text>
         </Stack>
 
@@ -191,7 +205,7 @@ export default function LoftSewingRoom() {
       </Grid>
 
       <Stack gap={10}>
-        <H3 style={{ margin: 0 }}>The loft — sleep + office desk</H3>
+        <H3 style={{ margin: 0 }}>The loft — sleeping platform, open underneath</H3>
         <Table
           headers={["Retailer", "Product", "Why", "Approx."]}
           rows={loftRows}
@@ -200,7 +214,17 @@ export default function LoftSewingRoom() {
       </Stack>
 
       <Stack gap={10}>
-        <H3 style={{ margin: 0 }}>Sewing station — under the window</H3>
+        <H3 style={{ margin: 0 }}>Office desk — under the 60" window</H3>
+        <Table
+          headers={["Retailer", "Product", "Why", "Approx."]}
+          rows={deskRows}
+          columnAlign={["left", "left", "left", "right"]}
+          striped
+        />
+      </Stack>
+
+      <Stack gap={10}>
+        <H3 style={{ margin: 0 }}>Sewing station — right wall</H3>
         <Table
           headers={["Retailer", "Product", "Why", "Approx."]}
           rows={sewRows}
@@ -224,11 +248,11 @@ export default function LoftSewingRoom() {
           <CardHeader>How the three zones fit</CardHeader>
           <CardBody>
             <Stack gap={8}>
-              <Text><Text weight="semibold">Back/top wall (solid):</Text> loft up top, office desk + chair below, ladder at the left end — the only wall with no window or door.</Text>
+              <Text><Text weight="semibold">Back/top wall (solid):</Text> loft up top with cube storage + cart below, ladder at the left end — the only wall with no window or door.</Text>
               <Divider />
-              <Text><Text weight="semibold">Left wall (60" window):</Text> sewing bench for daylight, pegboard above, drawers below.</Text>
+              <Text><Text weight="semibold">Left wall (60" window):</Text> office desk for daylight, task chair and lamp.</Text>
               <Divider />
-              <Text><Text weight="semibold">Right wall:</Text> cube storage + cart in the solid middle, between the 26" closet (top) and 28" door (bottom).</Text>
+              <Text><Text weight="semibold">Right wall:</Text> sewing bench in the solid middle (between the 26" closet and 28" door), pegboard above, ALEX drawers below.</Text>
             </Stack>
           </CardBody>
         </Card>
@@ -238,8 +262,8 @@ export default function LoftSewingRoom() {
           <CardBody>
             <Stack gap={6}>
               <Text>• 2 windows (60" left, 50" bottom) + 3 doors (26" closet & 28" on the right, 29" entry on the bottom) — the top wall is the only solid run.</Text>
-              <Text>• Keep desk-height pieces under the windows; leave swing clearance for all three doors.</Text>
-              <Text>• Confirm the loft footprint (~42" × 80" twin) fits the 101" top wall and clears the top-right closet.</Text>
+              <Text>• Keep the office desk at sill height under the 60" window so daylight isn't blocked; leave swing clearance for all three doors.</Text>
+              <Text>• Pick a loft that's open underneath (no built-in desk) so the cubes + cart slide under it; confirm the ~42" × 80" twin footprint fits the 101" top wall and clears the closet.</Text>
             </Stack>
           </CardBody>
         </Card>
