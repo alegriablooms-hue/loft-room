@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Loft + Sewing Room — Design Brief</title>
+<title>Loft + Sewing + Office Room — Design Brief</title>
 <style>
   :root {
     --bg: #f7f4ef;
@@ -34,23 +34,29 @@
   .titlerow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
   h1 { font-size: 28px; margin: 0; letter-spacing: -0.01em; }
   h2 { font-size: 18px; margin: 0 0 12px; }
+  h3 { font-size: 15px; margin: 18px 0 8px; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.04em; }
   .pill {
     display: inline-block; font-size: 13px; font-weight: 600;
     background: var(--accent-soft); color: var(--accent);
     padding: 4px 12px; border-radius: 999px;
   }
   .lede { color: var(--ink-2); margin: 10px 0 0; max-width: 62ch; }
+  .purpose { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .chip { font-size: 13px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; }
+  .chip b { color: var(--accent); }
   .callout {
     background: var(--warn-bg); border: 1px solid var(--warn-line);
     border-radius: 12px; padding: 16px 18px; margin: 24px 0;
   }
+  .callout.good { background: #eef5e9; border-color: #bcd9a8; }
   .callout strong.title { display: block; margin-bottom: 4px; font-size: 15px; }
   .callout p { margin: 0; color: var(--ink-2); }
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 24px 0; }
   .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
-  .stat .v { font-size: 24px; font-weight: 700; }
+  .stat .v { font-size: 22px; font-weight: 700; }
   .stat .v.warn { color: var(--accent); }
   .stat .v.info { color: var(--info); }
+  .stat .v.good { color: var(--good); }
   .stat .l { font-size: 12px; color: var(--ink-3); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
   .figure { margin: 8px 0 28px; }
   .figure img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid var(--line); }
@@ -64,12 +70,17 @@
   .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
   .dot.good { background: var(--good); }
   .dot.bad { background: var(--bad); }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 6px; }
+  .tag.ikea { background: #e8eef7; color: #2a5599; }
+  .tag.wayfair { background: #efe6f4; color: #6a3f8c; }
+  .tag.target { background: #fae6e6; color: #b5413f; }
   .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 28px; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
   .card .ch { font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-3); padding: 10px 16px; border-bottom: 1px solid var(--line); background: #faf7f2; }
   .card .cb { padding: 14px 16px; font-size: 14px; color: var(--ink-2); }
   .card .cb p { margin: 0 0 8px; }
   .card .cb hr { border: none; border-top: 1px solid var(--line); margin: 10px 0; }
+  a { color: var(--accent); }
   .footnote { font-size: 13px; color: var(--ink-3); font-style: italic; margin-top: 8px; }
   svg { width: 100%; height: auto; display: block; }
   @media (max-width: 720px) {
@@ -82,111 +93,147 @@
 <div class="wrap">
   <header class="hero">
     <div class="titlerow">
-      <h1>Loft + Sewing Room — Design Brief</h1>
-      <span class="pill">10' × 16' × 7'</span>
+      <h1>Loft + Sewing + Office Room — Design Brief</h1>
+      <span class="pill">101" × 133" × 101.5"</span>
     </div>
-    <p class="lede">Narrow room with a light-birch Scandinavian loft bed and a dedicated sewing station underneath, sourced from IKEA.</p>
+    <p class="lede">A compact room (8'5" × 11'1", 8'5½" ceiling) doing triple duty: a lofted sleeping platform, a dedicated sewing station under the window, and an office desk tucked beneath the loft.</p>
+    <div class="purpose">
+      <span class="chip"><b>1.</b> Loft sleeping platform</span>
+      <span class="chip"><b>2.</b> Sewing station</span>
+      <span class="chip"><b>3.</b> Office desk</span>
+    </div>
   </header>
 
   <figure class="figure">
-    <img src="./loft-sewing-room-render.png" alt="Render of a light-wood loft bed with a sewing station underneath in a narrow room" />
-    <figcaption class="cap">Concept render — low/mid-loft adapted to the 7' ceiling, with the sewing station below.</figcaption>
+    <img src="./loft-sewing-room-render.png" alt="Render of a light-wood loft bed with an office desk beneath it and a sewing station under the window" />
+    <figcaption class="cap">Concept render — loft with built-in office desk on the right, sewing station under the 60" window on the left.</figcaption>
   </figure>
 
-  <div class="callout">
-    <strong class="title">Ceiling height is the binding constraint</strong>
-    <p>At a 7' (84") ceiling, no off-the-shelf IKEA loft bed fits — STORÅ needs 8'10"+ and VITVAL needs 7'10½". A <strong>low/mid-loft</strong> (platform ~58") is the realistic path: ~58" of seated workspace below, but a crawl-in bed rather than sit-up headroom above.</p>
+  <div class="callout good">
+    <strong class="title">Good news: the ceiling now works for a real loft</strong>
+    <p>At 101.5" (8'5½"), a standing loft is viable — IKEA VITVAL (needs 94½") fits, and the Wayfair Harriet Bee and Target loft beds (~65–69" tall, ~54" to the loft base) leave full headroom below for the desk and plenty above. Only IKEA's tall STORÅ (needs 106") still misses, by ~4½".</p>
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="v">10 ft</div><div class="l">Width</div></div>
-    <div class="stat"><div class="v">16 ft</div><div class="l">Length</div></div>
-    <div class="stat"><div class="v warn">7 ft</div><div class="l">Ceiling</div></div>
-    <div class="stat"><div class="v info">~58 in</div><div class="l">Loft platform</div></div>
+    <div class="stat"><div class="v">101"</div><div class="l">Width (8'5")</div></div>
+    <div class="stat"><div class="v">133"</div><div class="l">Length (11'1")</div></div>
+    <div class="stat"><div class="v good">101.5"</div><div class="l">Ceiling (8'5½")</div></div>
+    <div class="stat"><div class="v info">60"</div><div class="l">Window (left wall)</div></div>
   </div>
 
   <div class="cols">
     <section>
       <h2>Top-down layout</h2>
-      <svg viewBox="0 0 296 464" role="img" aria-label="Top-down floor plan of a 10 by 16 foot room">
-        <rect x="28" y="28" width="240" height="384" fill="#ffffff" stroke="#2b2722" stroke-width="2"/>
-        <line x1="100" y1="28" x2="196" y2="28" stroke="#b07a43" stroke-width="4"/>
-        <text x="148" y="18" fill="#6b6357" font-size="11" text-anchor="middle">window</text>
-        <line x1="196" y1="412" x2="256" y2="412" stroke="#9b9286" stroke-width="4"/>
-        <text x="226" y="428" fill="#6b6357" font-size="11" text-anchor="middle">door</text>
+      <svg viewBox="0 0 230 280" role="img" aria-label="Top-down floor plan of a 101 by 133 inch room">
+        <rect x="36" y="36" width="152" height="200" fill="#ffffff" stroke="#2b2722" stroke-width="2"/>
 
-        <rect x="30" y="30" width="154" height="161" fill="#f0e6d8" stroke="#b07a43" stroke-width="1.5" rx="3"/>
-        <text x="107" y="105" fill="#2b2722" font-size="10.5" text-anchor="middle"><tspan x="107" dy="-6">Loft bed above</tspan><tspan x="107" dy="12">sewing station below</tspan></text>
+        <!-- 60in window on left wall -->
+        <line x1="36" y1="81" x2="36" y2="171" stroke="#5a7a9c" stroke-width="5"/>
+        <text x="20" y="128" fill="#5a7a9c" font-size="10" text-anchor="middle" transform="rotate(-90 20 128)">60" window</text>
 
-        <rect x="34" y="148" width="142" height="34" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
-        <text x="105" y="167" fill="#2b2722" font-size="10.5" text-anchor="middle">Desk (LINNMON + 2×ALEX)</text>
+        <!-- 29in door, bottom wall near right -->
+        <line x1="135" y1="236" x2="178" y2="236" stroke="#9b9286" stroke-width="5"/>
+        <text x="156" y="250" fill="#6b6357" font-size="10" text-anchor="middle">door 29"</text>
 
-        <rect x="190" y="30" width="34" height="70" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
-        <text x="207" y="67" fill="#2b2722" font-size="10.5" text-anchor="middle">Ladder</text>
+        <!-- 28in door, right wall near bottom -->
+        <line x1="188" y1="186" x2="188" y2="228" stroke="#9b9286" stroke-width="5"/>
+        <text x="200" y="208" fill="#6b6357" font-size="10" text-anchor="middle" transform="rotate(90 200 208)">door 28"</text>
 
-        <rect x="30" y="230" width="32" height="112" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
-        <text x="46" y="286" fill="#2b2722" font-size="9.5" text-anchor="middle" transform="rotate(-90 46 286)">KALLAX storage</text>
+        <!-- Loft + office zone (right) -->
+        <rect x="124" y="38" width="62" height="120" fill="#f0e6d8" stroke="#b07a43" stroke-width="1.5" rx="3"/>
+        <text x="155" y="92" fill="#2b2722" font-size="10" text-anchor="middle"><tspan x="155" dy="-12">Loft bed above</tspan><tspan x="155" dy="12">office desk below</tspan><tspan x="155" dy="12" font-size="9" fill="#6b6357">+ ladder</tspan></text>
 
-        <rect x="92" y="234" width="130" height="118" fill="#faf7f2" stroke="#e4ddd2" stroke-width="1.5" stroke-dasharray="5 4" rx="3"/>
-        <text x="157" y="293" fill="#2b2722" font-size="10.5" text-anchor="middle">Rug</text>
+        <!-- Sewing station (left, under window) -->
+        <rect x="38" y="84" width="40" height="84" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
+        <text x="58" y="126" fill="#2b2722" font-size="10" text-anchor="middle"><tspan x="58" dy="-6">Sewing</tspan><tspan x="58" dy="12">station</tspan></text>
 
-        <text x="148" y="428" fill="#9b9286" font-size="11" text-anchor="middle">10 ft wide</text>
-        <text x="14" y="220" fill="#9b9286" font-size="11" text-anchor="middle" transform="rotate(-90 14 220)">16 ft long</text>
+        <!-- Storage (bottom left) -->
+        <rect x="38" y="190" width="48" height="44" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
+        <text x="62" y="214" fill="#2b2722" font-size="9.5" text-anchor="middle">Cube + cart</text>
+
+        <!-- Rug -->
+        <rect x="92" y="172" width="60" height="58" fill="#faf7f2" stroke="#e4ddd2" stroke-width="1.5" stroke-dasharray="5 4" rx="3"/>
+        <text x="122" y="203" fill="#9b9286" font-size="10" text-anchor="middle">rug</text>
+
+        <text x="112" y="28" fill="#9b9286" font-size="11" text-anchor="middle">101" wide</text>
+        <text x="206" y="136" fill="#9b9286" font-size="11" text-anchor="middle" transform="rotate(90 206 136)">133" long</text>
       </svg>
-      <p class="cap">Schematic, not to scale. Loft footprint at the window end; desk runs beneath it, fabric storage along the left wall.</p>
+      <p class="cap">Schematic, not to scale. Loft + office along the right wall; sewing bench under the window for daylight; storage and rug fill the center-left.</p>
     </section>
 
     <section>
-      <h2>Loft bed: fit check</h2>
+      <h2>Loft bed: fit check @ 101.5" ceiling</h2>
       <table>
-        <thead><tr><th>Option</th><th>Type</th><th class="num">Height</th><th class="num">Needs</th><th>Verdict</th></tr></thead>
+        <thead><tr><th>Option</th><th>Source</th><th class="num">Height</th><th>Verdict</th></tr></thead>
         <tbody>
-          <tr><td><span class="dot bad"></span>STORÅ</td><td>Full / solid pine</td><td class="num">84¼"</td><td class="num">8'10"+</td><td>Matches reference, too tall</td></tr>
-          <tr><td><span class="dot bad"></span>VITVAL + desk top</td><td>Twin / white</td><td class="num">76¾"</td><td class="num">94½"</td><td>Closest, still won't fit</td></tr>
-          <tr><td><span class="dot good"></span>Low / mid-loft build</td><td>Custom birch ply</td><td class="num">~58" plat.</td><td class="num">Fits 7'</td><td>Crawl-in bed, seated work below</td></tr>
+          <tr><td><span class="dot good"></span>Harriet Bee loft + built-in desk</td><td><span class="tag wayfair">Wayfair</span></td><td class="num">~67–69"</td><td>Fits — feature pick</td></tr>
+          <tr><td><span class="dot good"></span>ModernLuxe / Bellemave twin loft</td><td><span class="tag target">Target</span></td><td class="num">~65–76"</td><td>Fits</td></tr>
+          <tr><td><span class="dot good"></span>VITVAL twin + desk top</td><td><span class="tag ikea">IKEA</span></td><td class="num">76¾"</td><td>Fits (needs 94½")</td></tr>
+          <tr><td><span class="dot bad"></span>STORÅ full, solid pine</td><td><span class="tag ikea">IKEA</span></td><td class="num">84¼"</td><td>Needs 106" — ~4½" short</td></tr>
         </tbody>
       </table>
-      <p class="cap">Source: IKEA.com product specs (US), checked 2026.</p>
+      <p class="cap">Sources: Wayfair, Target, IKEA product specs, checked 2026.</p>
     </section>
   </div>
 
   <section>
-    <h2>Under-loft sewing station — IKEA sourcing</h2>
+    <h2>Furniture sourcing — IKEA · Wayfair · Target</h2>
+
+    <h3>The loft (sleep + office desk)</h3>
     <table>
-      <thead><tr><th>Product</th><th>Finish</th><th>Role</th><th class="num">Approx. price</th></tr></thead>
+      <thead><tr><th>Retailer</th><th>Product</th><th>Why</th><th class="num">Approx. price</th></tr></thead>
       <tbody>
-        <tr><td>ALEX drawer unit ×2</td><td>White</td><td>Desk legs + thread/notions storage</td><td class="num">~$130 ea</td></tr>
-        <tr><td>LINNMON / LAGKAPTEN top</td><td>Light wood</td><td>Desk surface spanning the ALEX units</td><td class="num">~$40–70</td></tr>
-        <tr><td>MICKE desk (alt.)</td><td>White</td><td>All-in-one option if you skip the combo</td><td class="num">~$99</td></tr>
-        <tr><td>SKÅDIS pegboard + hooks</td><td>Birch</td><td>Scissors, thread, rulers above the desk</td><td class="num">~$30+</td></tr>
-        <tr><td>KALLAX 2×4 shelf</td><td>White</td><td>Folded fabric + bins (left wall)</td><td class="num">~$80</td></tr>
-        <tr><td>RÅSKOG cart</td><td>Gray/white</td><td>Mobile catch-all for active projects</td><td class="num">~$45</td></tr>
-        <tr><td>MALSKÄR / GUNRIK chair</td><td>White</td><td>Swivel sewing chair</td><td class="num">~$80–130</td></tr>
+        <tr><td><span class="tag wayfair">Wayfair</span></td><td><a href="https://www.wayfair.com/baby-kids/pdp/harriet-bee-w119266927.html?piid=883270059%2C883270062">Harriet Bee loft bed w/ built-in desk &amp; storage</a></td><td>All-in-one loft + office desk + shelves; the linked pick</td><td class="num">~$400–600</td></tr>
+        <tr><td><span class="tag target">Target</span></td><td>ModernLuxe / Bellemave twin loft bed with desk &amp; shelves</td><td>Alt loft with built-in desk, drawers, staircase storage</td><td class="num">~$350–550</td></tr>
+        <tr><td><span class="tag ikea">IKEA</span></td><td>VITVAL loft bed frame with desk top (twin)</td><td>Cleanest, lightest option; integrated desk surface</td><td class="num">~$259</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Sewing station (under the window)</h3>
+    <table>
+      <thead><tr><th>Retailer</th><th>Product</th><th>Why</th><th class="num">Approx. price</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag ikea">IKEA</span></td><td>2× ALEX drawer unit + LAGKAPTEN / LINNMON top</td><td>The classic sewing bench — deep drawers for notions, sturdy top for the machine</td><td class="num">~$200–300</td></tr>
+        <tr><td><span class="tag ikea">IKEA</span></td><td>SKÅDIS pegboard + hooks/cups</td><td>Scissors, thread, rulers within reach above the bench</td><td class="num">~$30+</td></tr>
+        <tr><td><span class="tag target">Target</span></td><td>Brightroom 3-tier metal utility cart</td><td>Mobile catch-all for an in-progress project</td><td class="num">~$40</td></tr>
+        <tr><td><span class="tag wayfair">Wayfair</span></td><td>Adjustable-height craft / sewing table (optional upgrade)</td><td>If you want a dedicated tilt/height table instead of the ALEX combo</td><td class="num">~$120–200</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Storage, seating &amp; finishing</h3>
+    <table>
+      <thead><tr><th>Retailer</th><th>Product</th><th>Why</th><th class="num">Approx. price</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag ikea">IKEA</span></td><td>KALLAX 2×2 or 2×4 shelf + fabric bins</td><td>Folded fabric, bins, books — doubles as a room divider</td><td class="num">~$70–110</td></tr>
+        <tr><td><span class="tag target">Target</span></td><td>Brightroom cube organizer + fabric drawers</td><td>Alternative cube storage in white/wood</td><td class="num">~$50–90</td></tr>
+        <tr><td><span class="tag wayfair">Wayfair</span></td><td>Ergonomic office task chair (white/mesh)</td><td>Shared between the office desk and sewing bench</td><td class="num">~$90–160</td></tr>
+        <tr><td><span class="tag target">Target</span></td><td>Task lamp + low-pile cream area rug (~5×7)</td><td>Sewing light + softens the floor under the rug zone</td><td class="num">~$60–120</td></tr>
       </tbody>
     </table>
   </section>
 
   <div class="cards" style="margin-top:28px;">
     <div class="card">
-      <div class="ch">Two realistic paths</div>
+      <div class="ch">How the three zones fit</div>
       <div class="cb">
-        <p><strong>1. Low/mid-loft build</strong> — platform ~58", seated sewing below, crawl-in bed above. No exact IKEA SKU; a custom birch platform or IKEA hack.</p>
+        <p><strong>Right wall:</strong> loft bed up top, office desk + chair underneath, ladder at the foot.</p>
         <hr/>
-        <p><strong>2. Skip the loft</strong> — daybed plus a wall-mounted sewing zone if you want full standing headroom.</p>
+        <p><strong>Left wall (window):</strong> sewing bench for daylight, pegboard above, drawers below.</p>
+        <hr/>
+        <p><strong>Center-left:</strong> cube storage + rolling cart, rug anchoring the open floor.</p>
       </div>
     </div>
     <div class="card">
-      <div class="ch">Next steps</div>
+      <div class="ch">Watch-outs</div>
       <div class="cb">
-        <p>• Confirm low-loft build vs. dropping the loft.</p>
-        <p>• Re-render to match the chosen approach.</p>
-        <p>• Option: straight-on elevation of the sewing wall.</p>
-        <p>• Option: warmer cream palette from reference #1.</p>
+        <p>• Keep the 60" window clear of tall storage so daylight reaches the sewing bench.</p>
+        <p>• Leave swing clearance for the 28" and 29" doors on the right/bottom walls.</p>
+        <p>• Confirm the chosen loft's footprint (~42" × 80" twin) against the 101" wall before buying.</p>
       </div>
     </div>
   </div>
 
-  <p class="footnote">The render is an artistic visualization — dimensions are approximated and furniture resembles, but is not an exact copy of, the IKEA pieces listed.</p>
+  <p class="footnote">The render is an artistic visualization — dimensions are approximated and furniture resembles, but is not an exact copy of, the listed pieces. Prices are rough 2026 estimates; verify on each retailer's site.</p>
 </div>
 </body>
 </html>
