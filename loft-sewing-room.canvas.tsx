@@ -7,6 +7,7 @@ import {
   Grid,
   H2,
   H3,
+  Link,
   Pill,
   Row,
   Stack,
@@ -80,30 +81,46 @@ function FloorPlan() {
 }
 
 export default function LoftSewingRoom() {
+  const L = {
+    harrietBee: "https://www.wayfair.com/baby-kids/pdp/harriet-bee-w119266927.html?piid=883270059%2C883270062",
+    targetLoft: "https://www.target.com/p/twin-size-wood-loft-bed-with-desk-multiple-storage-shelves-and-wardrobe-gray-white-modernluxe/-/A-1003413014",
+    vitval: "https://www.ikea.com/us/en/p/vitval-loft-bed-frame-with-desk-top-white-light-gray-s29303940/",
+    stora: "https://www.ikea.com/us/en/p/stora-loft-bed-frame-black-80160867/",
+    alex: "https://www.ikea.com/us/en/search/?q=alex%20drawer%20unit",
+    lagkapten: "https://www.ikea.com/us/en/search/?q=lagkapten",
+    skadis: "https://www.ikea.com/us/en/search/?q=skadis",
+    kallax: "https://www.ikea.com/us/en/search/?q=kallax",
+    cart: "https://www.target.com/s?searchTerm=brightroom%203%20tier%20utility%20cart",
+    craftTable: "https://www.wayfair.com/keyword.php?keyword=adjustable%20height%20craft%20table",
+    cube: "https://www.target.com/s?searchTerm=brightroom%20cube%20organizer",
+    chair: "https://www.wayfair.com/keyword.php?keyword=ergonomic%20mesh%20task%20chair%20white",
+    lamp: "https://www.target.com/s?searchTerm=task%20lamp",
+  };
+
   const fitRows = [
-    ["Harriet Bee loft + built-in desk", "Wayfair", "~67–69\"", "Fits — feature pick"],
-    ["ModernLuxe / Bellemave twin loft", "Target", "~65–76\"", "Fits"],
-    ["VITVAL twin + desk top", "IKEA", "76¾\"", "Fits (needs 94½\")"],
-    ["STORÅ full, solid pine", "IKEA", "84¼\"", "Needs 106\" — ~4½\" short"],
+    [<Link href={L.harrietBee}>Harriet Bee loft + built-in desk</Link>, "Wayfair", "~67–69\"", "Fits — feature pick"],
+    [<Link href={L.targetLoft}>ModernLuxe / Bellemave twin loft</Link>, "Target", "~65–76\"", "Fits"],
+    [<Link href={L.vitval}>VITVAL twin + desk top</Link>, "IKEA", "76¾\"", "Fits (needs 94½\")"],
+    [<Link href={L.stora}>STORÅ full, solid pine</Link>, "IKEA", "84¼\"", "Needs 106\" — ~4½\" short"],
   ];
   const fitTone: Array<"success" | "danger" | undefined> = ["success", "success", "success", "danger"];
 
   const loftRows = [
-    ["Wayfair", "Harriet Bee loft bed w/ built-in desk & storage", "All-in-one loft + office + shelves (linked pick)", "~$400–600"],
-    ["Target", "ModernLuxe / Bellemave twin loft w/ desk", "Alt loft: built-in desk, drawers, stair storage", "~$350–550"],
-    ["IKEA", "VITVAL loft bed frame with desk top (twin)", "Lightest, cleanest; integrated desk surface", "~$259"],
+    ["Wayfair", <Link href={L.harrietBee}>Harriet Bee loft bed w/ built-in desk & storage</Link>, "All-in-one loft + office + shelves (linked pick)", "~$400–600"],
+    ["Target", <Link href={L.targetLoft}>ModernLuxe / Bellemave twin loft w/ desk</Link>, "Alt loft: built-in desk, drawers, stair storage", "~$350–550"],
+    ["IKEA", <Link href={L.vitval}>VITVAL loft bed frame with desk top (twin)</Link>, "Lightest, cleanest; integrated desk surface", "~$259"],
   ];
   const sewRows = [
-    ["IKEA", "2× ALEX drawers + LAGKAPTEN top", "Classic sewing bench — notion drawers + sturdy top", "~$200–300"],
-    ["IKEA", "SKÅDIS pegboard + hooks", "Scissors, thread, rulers above the bench", "~$30+"],
-    ["Target", "Brightroom 3-tier utility cart", "Mobile catch-all for active projects", "~$40"],
-    ["Wayfair", "Adjustable craft/sewing table (optional)", "Dedicated height/tilt table vs. ALEX combo", "~$120–200"],
+    ["IKEA", <Text as="span">2× <Link href={L.alex}>ALEX drawers</Link> + <Link href={L.lagkapten}>LAGKAPTEN</Link> top</Text>, "Classic sewing bench — notion drawers + sturdy top", "~$200–300"],
+    ["IKEA", <Link href={L.skadis}>SKÅDIS pegboard + hooks</Link>, "Scissors, thread, rulers above the bench", "~$30+"],
+    ["Target", <Link href={L.cart}>Brightroom 3-tier utility cart</Link>, "Mobile catch-all for active projects", "~$40"],
+    ["Wayfair", <Link href={L.craftTable}>Adjustable craft/sewing table (optional)</Link>, "Dedicated height/tilt table vs. ALEX combo", "~$120–200"],
   ];
   const finishRows = [
-    ["IKEA", "KALLAX 2×2 / 2×4 + fabric bins", "Folded fabric, books; doubles as divider", "~$70–110"],
-    ["Target", "Brightroom cube organizer + drawers", "Alt cube storage in white/wood", "~$50–90"],
-    ["Wayfair", "Ergonomic task chair (white/mesh)", "Shared by office desk and sewing bench", "~$90–160"],
-    ["Target", "Task lamp + cream area rug (~5×7)", "Sewing light + anchors the floor", "~$60–120"],
+    ["IKEA", <Link href={L.kallax}>KALLAX 2×2 / 2×4 + fabric bins</Link>, "Folded fabric, books; doubles as divider", "~$70–110"],
+    ["Target", <Link href={L.cube}>Brightroom cube organizer + drawers</Link>, "Alt cube storage in white/wood", "~$50–90"],
+    ["Wayfair", <Link href={L.chair}>Ergonomic task chair (white/mesh)</Link>, "Shared by office desk and sewing bench", "~$90–160"],
+    ["Target", <Link href={L.lamp}>Task lamp</Link>, "Sewing light + anchors the floor", "~$60–120"],
   ];
 
   return (
