@@ -41,41 +41,49 @@ function FloorPlan() {
     >
       <rect x={pad} y={pad} width={w} height={l} fill={theme.bg.elevated} stroke={theme.stroke.primary} strokeWidth={2} />
 
-      {/* 60in window, left wall */}
-      <line x1={pad} y1={inY(33)} x2={pad} y2={inY(93)} stroke={theme.accent.primary} strokeWidth={5} />
-      <text x={pad - 14} y={inY(63)} fill={theme.text.secondary} fontSize={10} textAnchor="middle" transform={`rotate(-90 ${pad - 14} ${inY(63)})`}>60" window</text>
-
-      {/* 29in door, bottom wall */}
-      <line x1={inX(60)} y1={pad + l} x2={inX(89)} y2={pad + l} stroke={theme.text.tertiary} strokeWidth={5} />
-      <text x={inX(74)} y={pad + l + 16} fill={theme.text.secondary} fontSize={10} textAnchor="middle">door 29"</text>
-
-      {/* 28in door, right wall */}
-      <line x1={pad + w} y1={inY(100)} x2={pad + w} y2={inY(128)} stroke={theme.text.tertiary} strokeWidth={5} />
-
-      {/* Loft + office (right) */}
-      <rect x={inX(56)} y={inY(2)} width={43 * s} height={80 * s} fill={theme.fill.tertiary} stroke={theme.accent.primary} strokeWidth={1.5} rx={3} />
-      <text x={inX(77.5)} y={inY(40)} fill={theme.text.primary} fontSize={10} textAnchor="middle">
-        <tspan x={inX(77.5)} dy={-6}>Loft above</tspan>
-        <tspan x={inX(77.5)} dy={12}>office below</tspan>
+      {/* Loft + office against the solid TOP wall */}
+      <rect x={inX(3)} y={inY(1)} width={80 * s} height={40 * s} fill={theme.fill.tertiary} stroke={theme.accent.primary} strokeWidth={1.5} rx={3} />
+      <text x={inX(43)} y={inY(21)} fill={theme.text.primary} fontSize={10} textAnchor="middle">
+        <tspan x={inX(43)} dy={-6}>Loft above</tspan>
+        <tspan x={inX(43)} dy={12}>office below</tspan>
       </text>
 
-      {/* Sewing station (left, under window) */}
-      <rect x={inX(2)} y={inY(33)} width={26 * s} height={60 * s} fill={theme.fill.secondary} stroke={theme.stroke.secondary} strokeWidth={1.5} rx={3} />
-      <text x={inX(15)} y={inY(63)} fill={theme.text.primary} fontSize={10} textAnchor="middle">
-        <tspan x={inX(15)} dy={-6}>Sewing</tspan>
-        <tspan x={inX(15)} dy={12}>station</tspan>
+      {/* Sewing station on LEFT wall, under the 60in window */}
+      <rect x={inX(1)} y={inY(75)} width={23 * s} height={53 * s} fill={theme.fill.secondary} stroke={theme.stroke.secondary} strokeWidth={1.5} rx={3} />
+      <text x={inX(13)} y={inY(101)} fill={theme.text.primary} fontSize={10} textAnchor="middle">
+        <tspan x={inX(13)} dy={-6}>Sewing</tspan>
+        <tspan x={inX(13)} dy={12}>station</tspan>
       </text>
 
-      {/* Storage bottom-left */}
-      <rect x={inX(2)} y={inY(104)} width={34 * s} height={27 * s} fill={theme.fill.secondary} stroke={theme.stroke.secondary} strokeWidth={1.5} rx={3} />
-      <text x={inX(19)} y={inY(118)} fill={theme.text.primary} fontSize={9.5} textAnchor="middle">Cube + cart</text>
+      {/* Cube + cart on RIGHT wall middle */}
+      <rect x={inX(76)} y={inY(50)} width={23 * s} height={42 * s} fill={theme.fill.secondary} stroke={theme.stroke.secondary} strokeWidth={1.5} rx={3} />
+      <text x={inX(87.5)} y={inY(71)} fill={theme.text.primary} fontSize={9.5} textAnchor="middle">Cube + cart</text>
 
       {/* Rug */}
-      <rect x={inX(40)} y={inY(96)} width={42 * s} height={34 * s} fill={theme.fill.primary} stroke={theme.stroke.tertiary} strokeWidth={1.5} strokeDasharray="5 4" rx={3} />
-      <text x={inX(61)} y={inY(114)} fill={theme.text.tertiary} fontSize={10} textAnchor="middle">rug</text>
+      <rect x={inX(28)} y={inY(60)} width={50 * s} height={52 * s} fill={theme.fill.primary} stroke={theme.stroke.tertiary} strokeWidth={1.5} strokeDasharray="5 4" rx={3} />
+      <text x={inX(53)} y={inY(86)} fill={theme.text.tertiary} fontSize={10} textAnchor="middle">rug</text>
+
+      {/* 60in window, LEFT wall (low) */}
+      <line x1={pad} y1={inY(70)} x2={pad} y2={inY(130)} stroke={theme.accent.primary} strokeWidth={5} />
+      <text x={pad - 14} y={inY(100)} fill={theme.accent.primary} fontSize={10} textAnchor="middle" transform={`rotate(-90 ${pad - 14} ${inY(100)})`}>60" window</text>
+
+      {/* 50in window, BOTTOM wall */}
+      <line x1={inX(4)} y1={pad + l} x2={inX(54)} y2={pad + l} stroke={theme.accent.primary} strokeWidth={5} />
+      <text x={inX(29)} y={pad + l + 16} fill={theme.accent.primary} fontSize={10} textAnchor="middle">50" window</text>
+
+      {/* 29in entry door, BOTTOM wall */}
+      <line x1={inX(68)} y1={pad + l} x2={inX(97)} y2={pad + l} stroke={theme.text.tertiary} strokeWidth={5} />
+      <text x={inX(82)} y={pad + l + 16} fill={theme.text.secondary} fontSize={10} textAnchor="middle">door 29"</text>
+
+      {/* 26in closet door, RIGHT wall (top) */}
+      <line x1={pad + w} y1={inY(4)} x2={pad + w} y2={inY(30)} stroke={theme.text.tertiary} strokeWidth={5} />
+      <text x={pad + w + 14} y={inY(17)} fill={theme.text.secondary} fontSize={10} textAnchor="middle" transform={`rotate(90 ${pad + w + 14} ${inY(17)})`}>closet 26"</text>
+
+      {/* 28in door, RIGHT wall (bottom) */}
+      <line x1={pad + w} y1={inY(101)} x2={pad + w} y2={inY(129)} stroke={theme.text.tertiary} strokeWidth={5} />
+      <text x={pad + w + 14} y={inY(115)} fill={theme.text.secondary} fontSize={10} textAnchor="middle" transform={`rotate(90 ${pad + w + 14} ${inY(115)})`}>door 28"</text>
 
       <text x={pad + w / 2} y={pad - 12} fill={theme.text.tertiary} fontSize={11} textAnchor="middle">101" wide</text>
-      <text x={pad + w + 16} y={pad + l / 2} fill={theme.text.tertiary} fontSize={11} textAnchor="middle" transform={`rotate(90 ${pad + w + 16} ${pad + l / 2})`}>133" long</text>
     </svg>
   );
 }
@@ -161,8 +169,10 @@ export default function LoftSewingRoom() {
           <H3 style={{ margin: 0 }}>Top-down layout</H3>
           <FloorPlan />
           <Text size="small" tone="tertiary">
-            Schematic, not to scale. Loft + office along the right wall; sewing
-            bench under the window for daylight; storage and rug fill center-left.
+            Schematic, not to scale. Loft + office sit against the only solid
+            wall (top); sewing bench under the 60" left window; cube storage on
+            the right wall between the closet and the 28" door; the 50" window
+            and 29" entry stay clear on the bottom wall.
           </Text>
         </Stack>
 
@@ -214,11 +224,11 @@ export default function LoftSewingRoom() {
           <CardHeader>How the three zones fit</CardHeader>
           <CardBody>
             <Stack gap={8}>
-              <Text><Text weight="semibold">Right wall:</Text> loft up top, office desk + chair below, ladder at the foot.</Text>
+              <Text><Text weight="semibold">Back/top wall (solid):</Text> loft up top, office desk + chair below, ladder at the left end — the only wall with no window or door.</Text>
               <Divider />
-              <Text><Text weight="semibold">Left wall (window):</Text> sewing bench for daylight, pegboard above, drawers below.</Text>
+              <Text><Text weight="semibold">Left wall (60" window):</Text> sewing bench for daylight, pegboard above, drawers below.</Text>
               <Divider />
-              <Text><Text weight="semibold">Center-left:</Text> cube storage + rolling cart, rug anchoring the open floor.</Text>
+              <Text><Text weight="semibold">Right wall:</Text> cube storage + cart in the solid middle, between the 26" closet (top) and 28" door (bottom).</Text>
             </Stack>
           </CardBody>
         </Card>
@@ -227,9 +237,9 @@ export default function LoftSewingRoom() {
           <CardHeader>Watch-outs</CardHeader>
           <CardBody>
             <Stack gap={6}>
-              <Text>• Keep the 60" window clear of tall storage so daylight reaches the bench.</Text>
-              <Text>• Leave swing clearance for the 28" and 29" doors on the right/bottom walls.</Text>
-              <Text>• Confirm the loft footprint (~42" × 80" twin) against the 101" wall before buying.</Text>
+              <Text>• 2 windows (60" left, 50" bottom) + 3 doors (26" closet & 28" on the right, 29" entry on the bottom) — the top wall is the only solid run.</Text>
+              <Text>• Keep desk-height pieces under the windows; leave swing clearance for all three doors.</Text>
+              <Text>• Confirm the loft footprint (~42" × 80" twin) fits the 101" top wall and clears the top-right closet.</Text>
             </Stack>
           </CardBody>
         </Card>

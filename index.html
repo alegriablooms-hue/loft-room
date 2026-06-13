@@ -105,13 +105,13 @@
   </header>
 
   <figure class="figure">
-    <img src="./loft-sewing-room-render.png?v=3" alt="Render of a light-wood loft bed with an office desk beneath it and a sewing station under the window" />
-    <figcaption class="cap">Concept render — loft with built-in office desk on the right, sewing station under the 60" window on the left.</figcaption>
+    <img src="./loft-sewing-room-render.png?v=4" alt="Render of a light-wood loft bed against the back wall with an office desk beneath it and a sewing station under the left window" />
+    <figcaption class="cap">Concept render — loft + built-in office desk against the solid back wall; sewing station under the 60" left window; cube storage and closet on the right.</figcaption>
   </figure>
 
   <figure class="figure">
-    <img src="./loft-sewing-room-under-loft.png?v=1" alt="View from the desk under the loft, looking out at the sewing station, window, and storage" />
-    <figcaption class="cap">From under the loft — sitting at the office desk, looking out toward the sewing bench under the window, cube storage, and the door.</figcaption>
+    <img src="./loft-sewing-room-under-loft.png?v=2" alt="View from the desk under the loft, looking out at the sewing station, both windows, storage, and the entry door" />
+    <figcaption class="cap">From under the loft — looking out: sewing bench under the 60" left window, the 50" window and entry door on the far wall, and cube storage + cart on the right.</figcaption>
   </figure>
 
   <div class="callout good">
@@ -129,41 +129,49 @@
   <div class="cols">
     <section>
       <h2>Top-down layout</h2>
-      <svg viewBox="0 0 230 280" role="img" aria-label="Top-down floor plan of a 101 by 133 inch room">
+      <svg viewBox="0 0 234 286" role="img" aria-label="Top-down floor plan of a 101 by 133 inch room with two windows and three doors">
         <rect x="36" y="36" width="152" height="200" fill="#ffffff" stroke="#2b2722" stroke-width="2"/>
 
-        <!-- 60in window on left wall -->
-        <line x1="36" y1="81" x2="36" y2="171" stroke="#5a7a9c" stroke-width="5"/>
-        <text x="20" y="128" fill="#5a7a9c" font-size="10" text-anchor="middle" transform="rotate(-90 20 128)">60" window</text>
+        <!-- Loft + office zone, against the solid TOP wall -->
+        <rect x="40" y="38" width="120" height="60" fill="#f0e6d8" stroke="#b07a43" stroke-width="1.5" rx="3"/>
+        <text x="100" y="62" fill="#2b2722" font-size="10" text-anchor="middle"><tspan x="100" dy="0">Loft above</tspan><tspan x="100" dy="12">office desk below</tspan><tspan x="100" dy="11" font-size="8.5" fill="#6b6357">ladder at left end</tspan></text>
 
-        <!-- 29in door, bottom wall near right -->
-        <line x1="135" y1="236" x2="178" y2="236" stroke="#9b9286" stroke-width="5"/>
-        <text x="156" y="250" fill="#6b6357" font-size="10" text-anchor="middle">door 29"</text>
+        <!-- Sewing station on LEFT wall, under the 60in window -->
+        <rect x="38" y="150" width="34" height="78" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
+        <text x="55" y="186" fill="#2b2722" font-size="10" text-anchor="middle"><tspan x="55" dy="0">Sewing</tspan><tspan x="55" dy="12">station</tspan></text>
 
-        <!-- 28in door, right wall near bottom -->
-        <line x1="188" y1="186" x2="188" y2="228" stroke="#9b9286" stroke-width="5"/>
-        <text x="200" y="208" fill="#6b6357" font-size="10" text-anchor="middle" transform="rotate(90 200 208)">door 28"</text>
-
-        <!-- Loft + office zone (right) -->
-        <rect x="124" y="38" width="62" height="120" fill="#f0e6d8" stroke="#b07a43" stroke-width="1.5" rx="3"/>
-        <text x="155" y="92" fill="#2b2722" font-size="10" text-anchor="middle"><tspan x="155" dy="-12">Loft bed above</tspan><tspan x="155" dy="12">office desk below</tspan><tspan x="155" dy="12" font-size="9" fill="#6b6357">+ ladder</tspan></text>
-
-        <!-- Sewing station (left, under window) -->
-        <rect x="38" y="84" width="40" height="84" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
-        <text x="58" y="126" fill="#2b2722" font-size="10" text-anchor="middle"><tspan x="58" dy="-6">Sewing</tspan><tspan x="58" dy="12">station</tspan></text>
-
-        <!-- Storage (bottom left) -->
-        <rect x="38" y="190" width="48" height="44" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
-        <text x="62" y="214" fill="#2b2722" font-size="9.5" text-anchor="middle">Cube + cart</text>
+        <!-- Cube + cart on RIGHT wall middle (between closet and door) -->
+        <rect x="150" y="110" width="36" height="62" fill="#ece3d6" stroke="#cabfae" stroke-width="1.5" rx="3"/>
+        <text x="168" y="138" fill="#2b2722" font-size="9" text-anchor="middle"><tspan x="168" dy="0">Cube</tspan><tspan x="168" dy="11">+ cart</tspan></text>
 
         <!-- Rug -->
-        <rect x="92" y="172" width="60" height="58" fill="#faf7f2" stroke="#e4ddd2" stroke-width="1.5" stroke-dasharray="5 4" rx="3"/>
-        <text x="122" y="203" fill="#9b9286" font-size="10" text-anchor="middle">rug</text>
+        <rect x="74" y="132" width="70" height="72" fill="#faf7f2" stroke="#e4ddd2" stroke-width="1.5" stroke-dasharray="5 4" rx="3"/>
+        <text x="109" y="170" fill="#9b9286" font-size="10" text-anchor="middle">rug</text>
+
+        <!-- 60in window, LEFT wall (low) -->
+        <line x1="36" y1="141" x2="36" y2="231" stroke="#5a7a9c" stroke-width="5"/>
+        <text x="22" y="186" fill="#5a7a9c" font-size="10" text-anchor="middle" transform="rotate(-90 22 186)">60" window</text>
+
+        <!-- 50in window, BOTTOM wall (left of entry) -->
+        <line x1="42" y1="236" x2="117" y2="236" stroke="#5a7a9c" stroke-width="5"/>
+        <text x="79" y="250" fill="#5a7a9c" font-size="10" text-anchor="middle">50" window</text>
+
+        <!-- 29in entry door, BOTTOM wall (right) -->
+        <line x1="138" y1="236" x2="182" y2="236" stroke="#9b9286" stroke-width="5"/>
+        <text x="160" y="250" fill="#6b6357" font-size="10" text-anchor="middle">door 29"</text>
+
+        <!-- 26in closet door, RIGHT wall (top) -->
+        <line x1="188" y1="42" x2="188" y2="81" stroke="#9b9286" stroke-width="5"/>
+        <text x="202" y="62" fill="#6b6357" font-size="10" text-anchor="middle" transform="rotate(90 202 62)">closet 26"</text>
+
+        <!-- 28in door, RIGHT wall (bottom) -->
+        <line x1="188" y1="188" x2="188" y2="230" stroke="#9b9286" stroke-width="5"/>
+        <text x="202" y="209" fill="#6b6357" font-size="10" text-anchor="middle" transform="rotate(90 202 209)">door 28"</text>
 
         <text x="112" y="28" fill="#9b9286" font-size="11" text-anchor="middle">101" wide</text>
-        <text x="206" y="136" fill="#9b9286" font-size="11" text-anchor="middle" transform="rotate(90 206 136)">133" long</text>
+        <text x="220" y="136" fill="#9b9286" font-size="11" text-anchor="middle" transform="rotate(90 220 136)">133" long</text>
       </svg>
-      <p class="cap">Schematic, not to scale. Loft + office along the right wall; sewing bench under the window for daylight; storage and rug fill the center-left.</p>
+      <p class="cap">Schematic, not to scale. Loft + office sit against the only solid wall (top); sewing bench under the 60" left window; cube storage on the right wall between the closet and the 28" door; the 50" window and 29" entry stay clear on the bottom wall.</p>
     </section>
 
     <section>
@@ -221,19 +229,19 @@
     <div class="card">
       <div class="ch">How the three zones fit</div>
       <div class="cb">
-        <p><strong>Right wall:</strong> loft bed up top, office desk + chair underneath, ladder at the foot.</p>
+        <p><strong>Back/top wall (solid):</strong> loft bed up top, office desk + chair underneath, ladder at the left end — the only wall without a window or door.</p>
         <hr/>
-        <p><strong>Left wall (window):</strong> sewing bench for daylight, pegboard above, drawers below.</p>
+        <p><strong>Left wall (60" window):</strong> sewing bench for daylight, pegboard above, drawers below.</p>
         <hr/>
-        <p><strong>Center-left:</strong> cube storage + rolling cart, rug anchoring the open floor.</p>
+        <p><strong>Right wall:</strong> cube storage + rolling cart in the solid middle, between the 26" closet (top) and the 28" door (bottom).</p>
       </div>
     </div>
     <div class="card">
       <div class="ch">Watch-outs</div>
       <div class="cb">
-        <p>• Keep the 60" window clear of tall storage so daylight reaches the sewing bench.</p>
-        <p>• Leave swing clearance for the 28" and 29" doors on the right/bottom walls.</p>
-        <p>• Confirm the chosen loft's footprint (~42" × 80" twin) against the 101" wall before buying.</p>
+        <p>• The room has 2 windows (60" left, 50" bottom) and 3 doors (26" closet + 28" on the right wall, 29" entry on the bottom) — the top wall is the only solid run.</p>
+        <p>• Keep desk-height pieces under the windows so daylight isn't blocked; leave swing clearance for all three doors.</p>
+        <p>• Confirm the loft footprint (~42" × 80" twin) fits the 101" top wall and clears the top-right closet before buying.</p>
       </div>
     </div>
   </div>
